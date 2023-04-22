@@ -2,3 +2,118 @@
   font-family: 'Courier New';
   src: url('assets/cour.ttf') format('truetype');
 }
+
+* {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  height: 200px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.button {
+  background-color: #f15a24;
+  border-radius: 10px;
+  border: none;
+  transition: filter 200ms ease-in-out;
+  padding: 5px 15px;
+  font-family: 'Courier Prime', Courier, monospace;
+  font-weight: 400;
+  font-size: 1.125rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.button:hover {
+  filter: brightness(1.1);
+}
+
+.button button:disabled {
+  color: white;
+}
+
+.button input {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  display: flex;
+  width: 150px;
+}
+
+.button input::placeholder {
+  color: inherit;
+}
+
+.button input::-ms-input-placeholder {
+  color: inherit;
+}
+
+.button button {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button button img {
+  height: 24px;
+  width: 24px;
+}
+
+.button select {
+  background-color: transparent;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+#joke-area {
+  display: flex;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  overflow-y: auto;
+  max-height: 350px;
+}
+
+blockquote {
+  background-color: #f5f5f5;
+  border-left: 10px solid #cccccc;
+  padding: 10px;
+  quotes: '\201C''\201D''\2018''\2019';
+  text-align: justify;
+  font-family: 'Courier Prime', Courier, monospace;
+  max-width: 350px;
+  line-height: 30px;
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}

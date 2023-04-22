@@ -14,6 +14,33 @@
     <title>ChuckNorris.IO</title>
   </head>
   <body>
+    <img src="assets/chucknorris_logo_coloured_small@2x.png" alt="Logo" />
+
+    <nav>
+      <button class="button" id="random-joke">Random Joke</button>
+
+      <div class="button">
+        <button id="random-joke-cat">Random Joke:</button>
+        <select id="category">
+          <option value="" selected disabled hidden>Category</option>
+        </select>
+      </div>
+
+      <form class="button" id="search-form">
+        <input
+          type="text"
+          placeholder="Search Term"
+          id="search-term"
+          autocomplete="off"
+        />
+        <button type="submit" id="search-button">
+          <img src="assets/search-icon.svg" alt="search icon" />
+        </button>
+      </form>
+    </nav>
+
+    <section id="joke-area"></section>
+
     <script src="source.js"></script>
   </body>
 </html>
