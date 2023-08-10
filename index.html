@@ -1,19 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piadas do Chuck</title>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>ChuckNorris.IO</title>
-  </head>
-  <body>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="/projeto-chuck/assets/chucknorris_logo_coloured_small@2x (1).png" alt="chuck-foto">
+    </header>
+    
+    <main>
+        <div class="main-container">
+            <h1>Piadas Do Chuck</h1>
+
+            <div class="options-container">
+
+                <div class="card">
+                    <h3>Piada Aleatória</h3>
+                    <button onclick="piadaAleatoria()">Piada aleatória</button>
+                </div>
+
+                <div class="card">
+                    <h3>Piada por Categoria</h3>
+
+                    <label for="categories">
+                        <select id="categories">
+                        <option value="animal">Animal</option>
+                        <option value="career">Carreira</option>
+                        <option value="celebrity">Celebridade</option>
+                        <option value="dev">Dev</option>
+                        <option value="explicit">Explícita</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="food">Comida</option>
+                        <option value="history">História</option>
+                        <option value="money">Dinheiro</option>
+                        <option value="movie">Filme</option>
+                        <option value="music">Música</option>
+                        <option value="political">Política</option>
+                        <option value="religion">Religião</option>
+                        <option value="science">Ciência</option>
+                        <option value="sport">Esporte</option>
+                        <option value="travel">Viagem</option>
+                        </select>
+                    </label>
+    
+                    <button onclick="piadaCategoria()">Piada com categoria</button>
+                </div>
+
+                <div class="card">
+                    <h3>Pesquise piadas com palavras aleatórias</h3>
+
+                    <label for="texto">
+                        <input type="text" id="texto" placeholder="Insira uma palavra">
+                    </label>
+        
+                    <button onclick="piadaQuery()" type="submit">Procurar piada</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="jokes-container">
+            <div class="joke-space">
+                <p class="joke">A piada aparecerá aqui</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <span>Project by <a href="https://github.com/FranciscoLiedson">Eduardo Viana</a></span>
+    </footer>
+
     <script src="source.js"></script>
-  </body>
+</body>
 </html>
